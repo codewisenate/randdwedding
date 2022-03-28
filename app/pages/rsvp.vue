@@ -12,10 +12,6 @@
         <form v-else @submit.prevent="handleSubmit" name="rsvps" netlify>
           <div class="border border-grey-400 p-8 pt-4">
             <h2 class="pb-0">Please fill out to RSVP</h2>
-            <p class="pt-0 pb-4">
-              If you are attending both ceremony and reception in-person, please select both options
-              that apply.
-            </p>
             <div class="flex items-center border-b border-blue-400 py-2">
               <input
                 ref="nameInput"
@@ -29,12 +25,22 @@
             </div>
 
             <div class="flex flex-col items-center border-b border-b-2 border-blue-400 py-2">
+              <p class="pt-0 pb-4 text-gray-600">
+                If you are attending both ceremony and reception in-person, please select all
+                options that apply:
+              </p>
               <p
                 class="mb-36 bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight"
               >
                 <label for="ceremony"
-                  ><input type="checkbox" id="ceremony" name="ceremony" v-model="form.ceremony" />
-                  Yes, I will attend the ceremony</label
+                  ><input
+                    class="mr-2"
+                    type="checkbox"
+                    id="ceremony"
+                    name="ceremony"
+                    v-model="form.ceremony"
+                    @change="doCheck('ceremony')"
+                  />Yes, I will attend the ceremony</label
                 >
               </p>
               <p
@@ -42,12 +48,13 @@
               >
                 <label for="reception"
                   ><input
+                    class="mr-2"
                     type="checkbox"
                     id="reception"
                     name="reception"
                     v-model="form.reception"
-                  />
-                  Yes, I will attend the reception</label
+                    @change="doCheck('reception')"
+                  />Yes, I will attend the reception</label
                 >
               </p>
               <p
@@ -55,12 +62,13 @@
               >
                 <label for="streaming"
                   ><input
+                    class="mr-2"
                     type="checkbox"
                     id="streaming"
                     name="streaming"
                     v-model="form.streaming"
-                  />
-                  Yes, I will attend a virtual streaming of the ceremony</label
+                    @change="doCheck('streaming')"
+                  />I will attend a virtual streaming of the ceremony</label
                 >
               </p>
               <p
@@ -68,13 +76,13 @@
               >
                 <label for="unableToAttend"
                   ><input
+                    class="mr-2"
                     type="checkbox"
                     id="unableToAttend"
                     name="unableToAttend"
                     v-model="form.unableToAttend"
-                    v-change="canCheck(form.unableToAttend)"
-                  />
-                  No, I will not be attending</label
+                    @change="doCheck('unableToAttend')"
+                  />No, I will not be attending</label
                 >
               </p>
             </div>
@@ -132,11 +140,24 @@ export default class Home extends Vue {
       .join('&');
   }
 
-  canCheck(): void {
-    if (this.form.unableToAttend) {
-      this.form.ceremony = false;
-      this.form.reception = false;
+  doCheck(check: string): void {
+    if (check === 'ceremony' || check === 'reception') {
+      this.form.unableToAttend = false;
       this.form.streaming = false;
+    }
+    if (check === 'streaming') {
+      if (this.form.streaming) {
+        this.form.unableToAttend = false;
+        this.form.ceremony = false;
+        this.form.reception = false;
+      }
+    }
+    if (check === 'unableToAttend') {
+      if (this.form.unableToAttend) {
+        this.form.streaming = false;
+        this.form.ceremony = false;
+        this.form.reception = false;
+      }
     }
   }
 
