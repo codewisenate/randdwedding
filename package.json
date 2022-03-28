@@ -5,7 +5,7 @@
   "author": "Gomah",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts -o",
+    "dev": "nuxt-ts -o --fix",
     "build": "nuxt-ts build",
     "start": " nuxt-ts start",
     "generate": "nuxt-ts generate",

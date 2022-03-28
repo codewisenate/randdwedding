@@ -5,12 +5,12 @@
         <div v-html="$md.render(welcomeText)" class="home__welcome markdown" />
 
         <div class="mb-12 xl:mb-0">
-          <h4 v-if="isSignedUp">Thank you - we'll be in touch shortly.</h4>
+          <h4 v-if="isSignedUp">Thank you!</h4>
 
           <form
             v-else
             @submit.prevent="handleSubmit"
-            name="signups"
+            name="rsvps"
             netlify
             class="flex items-center border-b border-b-2 border-blue-400 py-2"
           >
@@ -28,17 +28,13 @@
               class="flex-shrink-0 bg-blue-500 hover:bg-blue-700 border-blue-500 hover:border-blue-700 text-sm border-4 text-white py-1 px-2 rounded"
               type="submit"
             >
-              Sign Up
+              RSVP
             </button>
           </form>
         </div>
       </div>
       <div class="flex flex-col w-full xl:w-2/5">
-        <img
-          alt="Hero"
-          class="rounded shadow-xl"
-          src="https://source.unsplash.com/random/720x400"
-        />
+        <img alt="Hero" class="rounded shadow-xl" src="/images/uploads/selfie.jpg" />
       </div>
     </div>
   </section>
@@ -89,7 +85,7 @@ export default class Home extends Vue {
       await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: this.encode({ 'form-name': 'signups', ...this.form }),
+        body: this.encode({ 'form-name': 'rsvps', ...this.form }),
       });
 
       this.isSignedUp = true;

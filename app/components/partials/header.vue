@@ -8,19 +8,43 @@
 
     <nav class="nav ml-auto">
       <ul class="flex flex-row items-center sm:mt-4 sm:pt-4 md:mt-0 md:pt-0 md:mr-4 lg:mr-8">
-        <li>
+        <!-- <li>
           <nuxt-link to="/blog" class="block font-medium px-4 py-1 md:p-2 lg:px-4">
             Blog
           </nuxt-link>
+        </li> -->
+        <li>
+          <nuxt-link to="/rsvp" class="block font-medium px-4 py-1 md:p-2 lg:px-4">
+            RSVP
+          </nuxt-link>
         </li>
-
-        <li
+        <li>
+          <nuxt-link to="/event-details" class="block font-medium px-4 py-1 md:p-2 lg:px-4">
+            Event Details
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/registry" class="block font-medium px-4 py-1 md:p-2 lg:px-4">
+            Registry
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/accommodation" class="block font-medium px-4 py-1 md:p-2 lg:px-4">
+            Accommodation
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/sightseeing" class="block font-medium px-4 py-1 md:p-2 lg:px-4">
+            Things to see
+          </nuxt-link>
+        </li>
+        <!-- <li
           v-for="(page, index) in pages"
           :key="index"
           class="block font-medium px-4 py-1 md:p-2 lg:px-4"
         >
           <nuxt-link :to="`/${page.slug}`">{{ page.title }}</nuxt-link>
-        </li>
+        </li> -->
       </ul>
     </nav>
   </header>
