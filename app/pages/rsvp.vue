@@ -19,7 +19,7 @@
                 class="appearance-none mb-36 bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
                 type="text"
                 name="name"
-                placeholder="Your name"
+                placeholder="Your full name"
                 aria-label="Your name"
               />
             </div>
@@ -87,7 +87,39 @@
               </p>
             </div>
 
-            <div class="flex items-center border-b border-b-2 border-blue-400 py-2">
+            <div v-if="isComingToEvent" class="flex flex-col border-b border-blue-400 py-2">
+              <p class="pt-4 pb-1 text-gray-600">
+                Are you bringing a +1 on the day?
+              </p>
+              <p
+                class="mb-36 bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight"
+              >
+                <label for="guest"
+                  ><input
+                    class="mr-2"
+                    type="checkbox"
+                    id="guest"
+                    name="guest"
+                    v-model="form.guest"
+                    @change="doCheck('guest')"
+                  />Yes, I will bring a guest</label
+                >
+              </p>
+            </div>
+
+            <div v-if="hasGuest" class="flex items-center border-b border-blue-400 py-2">
+              <input
+                ref="guestNameInput"
+                v-model="form.guestName"
+                class="appearance-none mb-36 bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                type="text"
+                name="guestName"
+                placeholder="Your guest's full name"
+                aria-label="Your guest's full name"
+              />
+            </div>
+
+            <div class="flex items-center border-b border-blue-400 py-2">
               <input
                 ref="emailInput"
                 v-model="form.email"
@@ -124,6 +156,10 @@ import { Component, Vue } from 'nuxt-property-decorator';
 export default class Home extends Vue {
   isSignedUp = false;
 
+  isComingToEvent = false;
+
+  hasGuest = false;
+
   form = {
     ceremony: false,
     reception: false,
@@ -132,6 +168,8 @@ export default class Home extends Vue {
     attendance: '',
     name: '',
     email: '',
+    guest: false,
+    guestName: '',
   };
 
   encode(data): string {
@@ -142,14 +180,26 @@ export default class Home extends Vue {
 
   doCheck(check: string): void {
     if (check === 'ceremony' || check === 'reception') {
-      this.form.unableToAttend = false;
-      this.form.streaming = false;
+      if (this.form.ceremony || this.form.reception) {
+        this.form.unableToAttend = false;
+        this.form.streaming = false;
+        this.isComingToEvent = true;
+      } else {
+        this.isComingToEvent = false;
+        this.hasGuest = false;
+        this.form.guest = false;
+        this.form.guestName = '';
+      }
     }
     if (check === 'streaming') {
       if (this.form.streaming) {
         this.form.unableToAttend = false;
         this.form.ceremony = false;
         this.form.reception = false;
+        this.form.guest = false;
+        this.form.guestName = '';
+        this.isComingToEvent = false;
+        this.hasGuest = false;
       }
     }
     if (check === 'unableToAttend') {
@@ -157,6 +207,18 @@ export default class Home extends Vue {
         this.form.streaming = false;
         this.form.ceremony = false;
         this.form.reception = false;
+        this.form.guest = false;
+        this.form.guestName = '';
+        this.isComingToEvent = false;
+        this.hasGuest = false;
+      }
+    }
+    if (check === 'guest') {
+      if (this.form.guest) {
+        this.hasGuest = true;
+      } else {
+        this.hasGuest = false;
+        this.form.guestName = '';
       }
     }
   }
