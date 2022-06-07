@@ -56,7 +56,7 @@
           >
         </h2>
         <p>
-          The beaches and Foreshore trail (via Trail 3) be accessed from the Cecil Green
+          The beaches and Foreshore trail (via Trail 3) can be accessed from the Cecil Green
           Park House parking lot.
         </p>
       </div>
