@@ -153,24 +153,26 @@ import { Component, Vue } from 'nuxt-property-decorator';
     return 'slide-left';
   },
 })
-export default class Home extends Vue {
+export default class RSVP extends Vue {
   isSignedUp = false;
 
   isComingToEvent = false;
 
   hasGuest = false;
 
-  form = {
-    ceremony: false,
-    reception: false,
-    streaming: false,
-    unableToAttend: false,
-    attendance: '',
-    name: '',
-    email: '',
-    guest: false,
-    guestName: '',
-  };
+  form = [
+    {
+      ceremony: false,
+      reception: false,
+      streaming: false,
+      unableToAttend: false,
+      attendance: '',
+      name: '',
+      email: '',
+      guest: false,
+      guestName: '',
+    },
+  ];
 
   encode(data): string {
     return Object.keys(data)
@@ -241,7 +243,7 @@ export default class Home extends Vue {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: this.encode({ 'form-name': 'rsvps', ...this.form }),
       });
-
+      console.log(...this.form);
       this.isSignedUp = true;
     } catch (error) {
       console.error(error);

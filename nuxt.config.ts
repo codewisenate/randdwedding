@@ -140,6 +140,14 @@ const nuxtConfig: Configuration = {
     '@nuxtjs/tailwindcss',
   ],
 
+  purge: [
+    "./pages/**/*.vue",
+    "./components/**/*.vue",
+    "./plugins/**/*.vue",
+    "./static/**/*.vue",
+    "./store/**/*.vue"
+  ],
+
   build: {
     html: {
       minify: {

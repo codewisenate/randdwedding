@@ -6,7 +6,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "dev": "nuxt-ts -o --fix",
+    "dev": "nuxt-ts -o",
     "build": "nuxt-ts build",
     "start": " nuxt-ts start",
     "generate": "nuxt-ts generate",
