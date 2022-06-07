@@ -2,10 +2,11 @@
   <section class="home">
     <div class="py-24 md:py-36 mx-auto flex flex-wrap flex-col md:flex-row items-center">
       <div class="flex flex-col w-full xl:w-3/5 justify-center lg:items-start overflow-y-hidden">
-        <div v-html="$md.render(welcomeText)" class="home__welcome markdown" />
+        <h1>Rowan &amp; Denielle's Wedding</h1>
+        <h2>Tying the knot, 11th of September, 2022 <br />...in Edwardian fashion amidst the trees and by the sea.</h2>
       </div>
-      <div class="flex flex-col w-full xl:w-2/5">
-        <img alt="Hero" class="rounded shadow-xl" src="/images/uploads/selfie.jpg" />
+      <div class="flex flex-col w-full xl:w-2/5"></div>
+        <!-- <img alt="Hero" class="rounded shadow-xl" src="/images/uploads/selfie.jpg" /> -->
       </div>
     </div>
   </section>

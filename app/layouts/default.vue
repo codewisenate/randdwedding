@@ -58,6 +58,11 @@ export default class DefaultLayout extends Vue {}
 * {
   font-family: "Cormorant Upright";
 }
+h1 {
+  font-size: 48px;
+  padding-bottom: 1rem;
+}
+
 h2 {
   font-size: 29px;
   padding-bottom: 1rem;
