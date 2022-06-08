@@ -6,11 +6,12 @@
       >
         <h1>Accommodation & Travel</h1>
         <h2>Where to stay</h2>
-        <p>
+        <h3>
           <a href="http://west-coast-suites-at-ubc.vancouver-hotels-bc.com/en"
             >West Coast Suites</a
-          ><br />5959 Student Union Boulevard,<br />Vancouver, Canada
-        </p>
+          ></h3>
+          <p>5959 Student Union Boulevard,<br />Vancouver, Canada</p>
+        
         <p>
           View:
           <a

@@ -29,7 +29,15 @@
 }
 
 .markdown a {
-  @apply text-blue-600 font-semibold;
+  @apply font-bold;
+  color: $linkgreen;
+  text-decoration: underline;
+  padding: 0 2px;
+  &:focus {
+    background-color: $linkgreen;
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
 .markdown strong a {

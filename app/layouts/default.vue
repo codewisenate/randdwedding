@@ -74,6 +74,9 @@ span {
   color: rgb(82, 82, 82);
   font-size: 1.3rem;
 }
+a {
+  color: $linkgreen;
+}
 
 .divider {
   position: relative;
