@@ -57,7 +57,7 @@ export default class DefaultLayout extends Vue {}
 
 body {
   transition: background 0.3s linear;
-  background-color: $edwardiangreen;
+  background-color: $darkgreen;
   background-size: cover;
   background-attachment: fixed;
   &.home {
