@@ -1,32 +1,33 @@
 <template>
-  <div style="display: flex">
-    <div style="width: 62%">
-      <iframe
-        src="https://www.online-rsvp.com/event/index.php?event_id=3852&embed=1&token=706b7dbb5fd2dcd69c6fb72562656e4e"
-        style="min-height: 80vh; width: 100%; border: none"
-        title="Online RSVP event form"
-        onload="this.style.height=(document.querySelector('.main').offsetHeight -
-document.querySelector('header').offsetHeight -
-document.querySelector('footer').offsetHeight)+'px';"
-      ></iframe>
-    </div>
-    <div style="margin-top: 8rem; text-align: center; width: 33%; padding-left: 2%;">
+  <section class="rsvp">
+    <div class="py-24 md:py-36 mx-auto flex flex-wrap flex-col items-start">
+      <div id="content"
+        class="px-6 shadow-md flex flex-col w-full xl:w-2/5 markdown"
+      >
       <h1>RSVP & Registry</h1>
-      <h2>Interested in the gift registry?</h2>
+      <p>We hope you’ll join us for our ceremony and afternoon tea! Please click here to RSVP by the 11th of July.</p>
+      <button
+        class="btn rsvp-btn"
+        onclick="window.open('https://rowdenwedding.online-rsvp.com', '_blank').focus();"
+      >
+        Fill out your RSVP 
+      </button>
+      <h2 class="mt-1">Interested in the gift registry?</h2>
       <p>
         If you would like to purchase an item off the registry, please indicate that it
         has been purchased on the registry item’s page by selecting “I have bought this
         gift already” for the convenience of other guests.
       </p>
       <button
-        class="registry-btn"
-        onclick="window.location = 'https://www.myregistry.com/wedding-registry/denielle-hill-and-rowan-king-vancouver-british-columbia/2556670'"
+        class="btn registry-btn"
+        onclick="window.open('https://www.myregistry.com/wedding-registry/denielle-hill-and-rowan-king-vancouver-british-columbia/2556670', '_blank').focus();"
       >
-        <i class="icon-present icons"></i>
         Visit the Gift Registry
       </button>
+       <p class="text-center"><small>Buttons open a new tab or window.</small></p>
     </div>
-  </div>
+    </div>
+  </section>
 </template>
 
 <style lang="scss">
@@ -48,37 +49,47 @@ hr {
   }
 }
 
-iframe {
-  background-color: rgba($white, 0.95);
-  border-radius: 6px 6px 0 0;
-  margin-right: 1rem;
-}
-
-.registry-btn {
-  background-color: rgb(141, 160, 110);
-  color: white;
+.btn {
+  background-color: rgba($white, 1);
+    border: 1px solid $darkgreen;
+  color: $darkgreen;
   border-radius: 3px;
   padding: 0.75em 30px;
   display: inline-block;
   max-height: 55px;
   transition: all 0.2s;
-  margin: 3rem auto 0;
+  margin: 2rem auto 2rem;
   font-style: italic;
 
   &::before {
-    content: "\e02f";
     font-family: simple-line-icons;
     margin-right: 6px;
-    color: lightgray;
+    color: $darkgreen;
     transition: color 0.2s;
     font-style: normal;
     vertical-align: -1px;
   }
 
+  &.registry-btn {
+    margin: 2rem auto 4rem;
+    &::before {
+      content: "\e02f";
+    }
+  }
+
+  &.rsvp-btn::before {
+    content: "\e080";
+  }
+
   &:hover {
     background-color: hsl(82, 20%, 42%);
+    border: 1px solid $white;
+    color: $white;
     transform: translateY(-3px);
     vertical-align: -1px;
+    &::before {
+      color: $white;
+    }
   }
 }
 </style>
