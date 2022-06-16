@@ -30,11 +30,11 @@
 
 .markdown a {
   @apply font-bold;
-  color: $linkgreen;
+  color: $white;
   text-decoration: underline;
   padding: 0 2px;
   &:focus {
-    background-color: $linkgreen;
+    background-color: $darkgreen;
     color: #fff;
     text-decoration: none;
   }

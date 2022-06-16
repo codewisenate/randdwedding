@@ -2,7 +2,7 @@
   <header class="flex items-center py-4 md:py-8">
     <div class="header__logo">
       <nuxt-link to="/">
-        <img :src="logo" alt="Rowan and Denielle's wedding website" />
+        <img :src="logo" class="logo" alt="Rowan and Denielle's wedding website" />
       </nuxt-link>
     </div>
 
@@ -29,7 +29,7 @@
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/sightseeing" class="block font-medium px-4 py-1 md:p-2 lg:px-4">
+          <nuxt-link to="/activities" class="block font-medium px-4 py-1 md:p-2 lg:px-4">
             Nearby Activities
           </nuxt-link>
         </li>
@@ -65,10 +65,14 @@ export default class Header extends Vue {
 </script>
 
 <style lang="scss">
+.logo {
+  height: 42px;
+}
 .nav {
   ul li > a {
+    color: $white;
     &.nuxt-link-active {
-      color: $linkgreen;
+      color: $white;
       @apply font-bold;
       text-decoration: underline;
     }

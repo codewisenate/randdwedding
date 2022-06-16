@@ -16,11 +16,14 @@ export default class Footer extends Vue {}
 
 <style lang="scss">
 .footer {
-  background-color: $linkgreen;
+  background-color: $darkgreen;
   color: rgba(#fff, 1);
   font-size: 1.25rem;
   font-weight: 100;
   padding-top: 1.75rem;
+  span {
+    text-shadow: none;
+  }
   .emoji {
     display: inline-block;
     color: #fff;

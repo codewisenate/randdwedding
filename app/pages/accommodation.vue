@@ -1,8 +1,8 @@
 <template>
   <section class="event-details">
-    <div class="py-24 md:py-36 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-      <div
-        class="flex flex-col w-full xl:w-3/5 justify-center lg:items-start overflow-y-hidden markdown"
+    <div class="py-24 md:py-36 mx-auto flex flex-wrap flex-col items-start">
+      <div id="content"
+        class="px-6 shadow-md flex flex-col w-full xl:w-2/5 markdown"
       >
         <h1>Accommodation & Travel</h1>
         <h2>Where to stay</h2>
@@ -54,14 +54,26 @@
   </section>
 </template>
 
+<style lang="scss" scoped></style>
+
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
+import { Component, Vue } from 'nuxt-property-decorator';
 
 @Component({
   // Called to know which transition to apply
   transition() {
-    return "slide-left";
+    return 'slide-left';
   },
 })
-export default class Home extends Vue {}
+
+export default class Home extends Vue {
+  
+  head () {
+    return {
+      bodyAttrs: {
+        class: 'travel'
+      }
+    }
+  };
+}
 </script>

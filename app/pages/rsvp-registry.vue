@@ -1,6 +1,6 @@
 <template>
   <div style="display: flex">
-    <div style="width: 66%">
+    <div style="width: 62%">
       <iframe
         src="https://www.online-rsvp.com/event/index.php?event_id=3852&embed=1&token=706b7dbb5fd2dcd69c6fb72562656e4e"
         style="min-height: 80vh; width: 100%; border: none"
@@ -10,8 +10,8 @@ document.querySelector('header').offsetHeight -
 document.querySelector('footer').offsetHeight)+'px';"
       ></iframe>
     </div>
-    <div style="margin-top: 8rem; text-align: center; width: 33%">
-      <hr />
+    <div style="margin-top: 8rem; text-align: center; width: 33%; padding-left: 2%;">
+      <h1>RSVP & Registry</h1>
       <h2>Interested in the gift registry?</h2>
       <p>
         If you would like to purchase an item off the registry, please indicate that it
@@ -48,6 +48,12 @@ hr {
   }
 }
 
+iframe {
+  background-color: rgba($white, 0.95);
+  border-radius: 6px 6px 0 0;
+  margin-right: 1rem;
+}
+
 .registry-btn {
   background-color: rgb(141, 160, 110);
   color: white;
@@ -76,3 +82,25 @@ hr {
   }
 }
 </style>
+
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator';
+
+@Component({
+  // Called to know which transition to apply
+  transition() {
+    return 'slide-left';
+  },
+})
+
+export default class Home extends Vue {
+  
+  head () {
+    return {
+      bodyAttrs: {
+        class: 'rsvp'
+      }
+    }
+  };
+}
+</script>

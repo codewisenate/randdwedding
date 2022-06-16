@@ -55,11 +55,43 @@ export default class DefaultLayout extends Vue {}
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  transition: background 0.3s linear;
+  background-color: $edwardiangreen;
+  background-size: cover;
+  background-attachment: fixed;
+  &.home {
+    background-image: url(../static/images/home-bg-1.jpg);
+     background-position: center;
+  }
+  &.rsvp {
+    background-image: url(../static/images/rsvp-bg-3.jpg);
+    background-position: center;
+  }
+  &.venue {
+    background-image: url(../static/images/venue-bg-2.jpg);
+    background-position: left;
+  }
+  &.travel {
+    background-image: url(../static/images/travel-bg-2.jpg);
+     background-position: center;
+  }
+  &.activities {
+    background-image: url(../static/images/activities-bg-1.jpg);
+    background-position: left;
+  }
+  &.covid {
+    background-image: url(../static/images/covid-bg-2.jpg);
+    background-position: center;
+  }
+}
+
 * {
   font-family: "Cormorant Upright";
 }
 h1 {
-  font-size: 48px;
+  font-size: 4rem;
+  line-height: 1;
   padding-bottom: 1rem;
 }
 
@@ -68,14 +100,28 @@ h2 {
   padding-bottom: 1rem;
 }
 
+ h1, h2, h3, p, li, span, a {
+    color: $white;
+    text-shadow: 2px 2px 4px $black, 0px 0px 10px rgba($black, 0.33), 0px 0px 30px rgba($black, 0.1);
+    &:focus {
+      text-shadow: 2px 2px 4px rgba($black, 0.8);
+    }
+  }
+
 p,
 li,
 span {
-  color: rgb(82, 82, 82);
-  font-size: 1.3rem;
+  font-size: 1.66rem;
 }
+
 a {
-  color: $linkgreen;
+  color: $white;
+}
+
+#content {
+  background: linear-gradient(20deg, rgba($darkgreen,0.99) 20%, rgba($darkgreen,0.2) 100%);
+  border-left: 4px solid $darkgreen;
+  border-radius: 6px;
 }
 
 .divider {
