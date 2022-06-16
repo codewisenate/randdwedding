@@ -84,6 +84,10 @@ body {
     background-image: url(../static/images/covid-bg-2.jpg);
     background-position: center;
   }
+  .footer {
+    background: url(../static/images/home-bg-1.jpg),  url(../static/images/rsvp-bg-3.jpg), url(../static/images/venue-bg-2.jpg), url(../static/images/travel-bg-2.jpg), url(../static/images/activities-bg-1.jpg), url(../static/images/covid-bg-2.jpg);
+    background-blend-mode: hue;
+  }
 }
 
 * {

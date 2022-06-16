@@ -16,7 +16,7 @@ export default class Footer extends Vue {}
 
 <style lang="scss">
 .footer {
-  background-color: $darkgreen;
+  background-color: $darkgreen !important;
   color: rgba(#fff, 1);
   font-size: 1.25rem;
   font-weight: 100;
