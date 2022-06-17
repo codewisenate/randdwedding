@@ -19,7 +19,7 @@
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/event-details" class="block font-medium px-4 py-1 md:p-2 lg:px-4">
+          <nuxt-link to="/event-details" class="block font-medium  px-4 py-1 md:p-2 lg:px-4">
             Event & Venue Details
           </nuxt-link>
         </li>
@@ -29,12 +29,12 @@
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/activities" class="block font-medium px-4 py-1 md:p-2 lg:px-4">
+          <nuxt-link to="/activities" class="block font-medium  px-4 py-1 md:p-2 lg:px-4">
             Nearby Activities
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/covid" class="block font-medium px-4 py-1 md:p-2 lg:px-4">
+          <nuxt-link to="/covid" class="block font-medium  px-4 py-1 md:p-2 lg:px-4">
             COVID
           </nuxt-link>
         </li>
@@ -64,7 +64,7 @@ export default class Header extends Vue {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .logo {
   height: 42px;
 }
@@ -72,6 +72,9 @@ export default class Header extends Vue {
   ul li > a {
     color: $white;
     line-height: 1.25;
+    @media (max-width: 768px) {
+      font-size: 1.33rem;
+    }
     &.nuxt-link-active {
       color: $white;
       @apply font-bold;

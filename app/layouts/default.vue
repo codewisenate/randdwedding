@@ -60,7 +60,7 @@ body {
   background-color: $darkgreen;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center 280px;
+  background-position: center 200px;
   @media (min-width: 768px) {
     background-size: cover;
     background-attachment: fixed;
