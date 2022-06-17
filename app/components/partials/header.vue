@@ -1,13 +1,13 @@
 <template>
-  <header class="flex items-center py-4 md:py-8">
+  <header class="flex items-start md:items-center py-4 md:py-8 sm:items-start">
     <div class="header__logo">
       <nuxt-link to="/">
-        <img :src="logo" class="logo" alt="Rowan and Denielle's wedding website" />
+        <img :src="logo" class="logo mt-4 md:mt-0" alt="Rowan and Denielle's wedding website" />
       </nuxt-link>
     </div>
 
     <nav class="nav ml-auto">
-      <ul class="flex flex-row items-center sm:mt-4 sm:pt-4 md:mt-0 md:pt-0 md:mr-4 lg:mr-8">
+      <ul class="flex flex-col md:flex-row items-center sm:mt-4 sm:pt-4 md:mt-0 md:pt-0 md:mr-4 lg:mr-8 text-center">
         <!-- <li>
           <nuxt-link to='/blog' class='block font-medium px-4 py-1 md:p-2 lg:px-4'>
             Blog

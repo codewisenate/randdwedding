@@ -1,6 +1,6 @@
 <template>
   <footer class="footer -mx-4 md:mx-0">
-    <div class="container mx-auto pb-6 flex justify-center">
+    <div class="container mx-auto pb-6 flex flex-col md:flex-row justify-center items-center">
       &copy; 2022 rowan & denielle — site made with <span class="emoji" role="img">🤍</span> by mum
       and dad
     </div>
