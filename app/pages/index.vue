@@ -19,7 +19,7 @@ h1 {
 }
 h2 {
   @media (min-width: 768px) {
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   }
   line-height: 1.5;
 }
