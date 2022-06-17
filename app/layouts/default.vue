@@ -58,31 +58,48 @@ export default class DefaultLayout extends Vue {}
 body {
   transition: background 0.3s linear;
   background-color: $darkgreen;
-  background-size: cover;
-  background-attachment: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center 280px;
+  @media (min-width: 768px) {
+    background-size: cover;
+    background-attachment: fixed;
+  }
   &.home {
     background-image: url(../static/images/home-bg-1.jpg);
-     background-position: center;
+    @media (min-width: 768px) {
+      background-position: center;
+    }
   }
   &.rsvp {
     background-image: url(../static/images/rsvp-bg-3.jpg);
-    background-position: center;
+    @media (min-width: 768px) {
+      background-position: center;
+    }
   }
   &.venue {
     background-image: url(../static/images/venue-bg-2.jpg);
-    background-position: left;
+    @media (min-width: 768px) {
+      background-position: 60%;
+    }
   }
   &.travel {
     background-image: url(../static/images/travel-bg-2.jpg);
-     background-position: center;
+    @media (min-width: 768px) {
+      background-position: 60%;
+    }
   }
   &.activities {
     background-image: url(../static/images/activities-bg-1.jpg);
-    background-position: left;
+    @media (min-width: 768px) {
+      background-position: 30%;
+    }
   }
   &.covid {
     background-image: url(../static/images/covid-bg-2.jpg);
-    background-position: center;
+    @media (min-width: 768px) {
+      background-position: 30%;
+    }
   }
   .footer {
     background: url(../static/images/home-bg-1.jpg),  url(../static/images/rsvp-bg-3.jpg), url(../static/images/venue-bg-2.jpg), url(../static/images/travel-bg-2.jpg), url(../static/images/activities-bg-1.jpg), url(../static/images/covid-bg-2.jpg);

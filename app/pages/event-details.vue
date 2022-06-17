@@ -2,7 +2,7 @@
   <section class="event-details">
     <div class="py-24 md:py-36 mx-auto flex flex-wrap flex-col md:flex-row items-center">
       <div id="content"
-        class="px-6 shadow-md flex flex-col w-full xl:w-2/5 justify-center lg:items-start markdown"
+        class="px-6 shadow-md flex flex-col w-full lg:w-2/5 justify-center lg:items-start markdown mt-6 md:mt-0"
       >
         <h1>Event & Venue Details</h1>
 
