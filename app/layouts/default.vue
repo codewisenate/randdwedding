@@ -61,31 +61,31 @@ body {
   background-size: cover;
   background-attachment: fixed;
   &.home {
-    background-image: url(../static/images/home-bg-1.webp);
+    background-image: url(../static/images/home-bg-1.jpg);
      background-position: center;
   }
   &.rsvp {
-    background-image: url(../static/images/rsvp-bg-3.webp);
+    background-image: url(../static/images/rsvp-bg-3.jpg);
     background-position: center;
   }
   &.venue {
-    background-image: url(../static/images/venue-bg-2.webp);
+    background-image: url(../static/images/venue-bg-2.jpg);
     background-position: left;
   }
   &.travel {
-    background-image: url(../static/images/travel-bg-2.webp);
+    background-image: url(../static/images/travel-bg-2.jpg);
      background-position: center;
   }
   &.activities {
-    background-image: url(../static/images/activities-bg-1.webp);
+    background-image: url(../static/images/activities-bg-1.jpg);
     background-position: left;
   }
   &.covid {
-    background-image: url(../static/images/covid-bg-2.webp);
+    background-image: url(../static/images/covid-bg-2.jpg);
     background-position: center;
   }
   .footer {
-    background: url(../static/images/home-bg-1.webp),  url(../static/images/rsvp-bg-3.webp), url(../static/images/venue-bg-2.webp), url(../static/images/travel-bg-2.webp), url(../static/images/activities-bg-1.webp), url(../static/images/covid-bg-2.webp);
+    background: url(../static/images/home-bg-1.jpg),  url(../static/images/rsvp-bg-3.jpg), url(../static/images/venue-bg-2.jpg), url(../static/images/travel-bg-2.jpg), url(../static/images/activities-bg-1.jpg), url(../static/images/covid-bg-2.jpg);
     background-blend-mode: hue;
   }
 }
