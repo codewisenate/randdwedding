@@ -2,7 +2,7 @@
   <section class="event-details">
     <div class="py-24 md:py-36 mx-auto flex flex-wrap flex-col justify-end items-end">
       <div id="content"
-        class="shadow-md px-6 flex flex-col items-start justify-items-end justify-end w-full lg:w-2/5  markdown mt-6 md:mt-0"
+        class="shadow-md px-6 flex flex-col items-start justify-items-end justify-end w-full lg:w-2/5  markdown mt-24 md:mt-0"
       >
         <h1>Nearby Activities</h1>
         <h2><a href="http://www.moa.ubc.ca">Museum of Anthropology</a></h2>

@@ -2,7 +2,7 @@
   <section class="rsvp">
     <div class="py-24 md:py-36 mx-auto flex flex-wrap flex-col items-start">
       <div id="content"
-        class="px-6 shadow-md flex flex-col w-full lg:w-2/5 markdown mt-6 md:mt-0"
+        class="px-6 shadow-md flex flex-col w-full lg:w-2/5 markdown mt-24 md:mt-0"
       >
       <h1>RSVP & Registry</h1>
       <p>We hope you’ll join us for our ceremony and afternoon tea! Please click here to RSVP by the 11th of July.</p>

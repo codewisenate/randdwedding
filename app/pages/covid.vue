@@ -2,7 +2,7 @@
   <section class="event-details">
     <div class="py-24 md:py-36 mx-auto flex flex-wrap flex-col items-end">
       <div id="content"
-        class="px-6 shadow-md flex flex-col w-full lg:w-2/5 markdown mt-20 md:mt-0"
+        class="px-6 shadow-md flex flex-col w-full lg:w-2/5 markdown mt-24 md:mt-0"
       >
         <h1>COVID</h1>
         <p>
