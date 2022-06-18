@@ -1,8 +1,8 @@
 <template>
   <footer class="footer -mx-4 md:mx-0">
-    <div class="container mx-auto pb-6 flex flex-col md:flex-row justify-center items-center">
-      &copy; 2022 rowan & denielle — site made with <span class="emoji" role="img">🤍</span> by mum
-      and dad
+    <div class="container mx-auto px-6 pb-6 flex flex-col md:flex-row justify-center items-center">
+      <div class="text-center">&copy; 2022 rowan & denielle — site made with <span class="emoji" role="img">🤍</span> by mum
+      and dad</div>
     </div>
   </footer>
 </template>
@@ -29,7 +29,7 @@ export default class Footer extends Vue {}
     color: #fff;
     font-size: 0.8rem;
     position: relative;
-    top: 4px;
+    top: 0;
     margin: 0 2px;
   }
 }
