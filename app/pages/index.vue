@@ -13,15 +13,19 @@
 
 <style lang="scss" scoped>
 h1 {
+  font-size: 18vw !important;
+  line-height: 1.1;
+  margin-bottom: 1rem;
   @media (min-width: 768px) {
-  font-size: 6rem;
+    font-size: 6rem !important;
   }
 }
 h2 {
+  font-size: 8vw !important;
+  line-height: 1.25;
   @media (min-width: 768px) {
-  font-size: 2.5rem;
+    font-size: 2.5rem !important;
   }
-  line-height: 1.5;
 }
 </style>
 
