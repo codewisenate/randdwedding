@@ -72,6 +72,10 @@ export default class Header extends Vue {
   ul li > a {
     color: $white;
     line-height: 1.25;
+    white-space: nowrap;
+    @media (min-width: 768px) {
+      white-space: normal;
+    }
     @media (max-width: 768px) {
       font-size: 1.33rem;
     }

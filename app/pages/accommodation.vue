@@ -4,7 +4,7 @@
       <div id="content"
         class="px-6 shadow-md flex flex-col w-full lg:w-2/5 markdown mt-24 md:mt-0"
       >
-        <h1>Accommodation & Travel</h1>
+        <h1>Travel & Accommodation</h1>
         <h2>Where to stay</h2>
         <h3>
           <a href="http://west-coast-suites-at-ubc.vancouver-hotels-bc.com/en"

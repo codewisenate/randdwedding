@@ -110,14 +110,20 @@ body {
 * {
   font-family: "Cormorant Upright";
 }
-h1 {
-  font-size: 4rem;
+.markdown h1 {
+  font-size: 11vw;
+  @media (min-width: 768px) {
+    font-size: 4rem;
+  }
   line-height: 1;
   padding-bottom: 1rem;
 }
 
-h2 {
-  font-size: 29px;
+.markdown h2 {
+  font-size: 9vw;
+  @media (min-width: 768px) {
+    font-size: 29px;
+  }
   padding-bottom: 1rem;
 }
 
