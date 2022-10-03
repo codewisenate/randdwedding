@@ -4,7 +4,7 @@
       <div id="content" 
       class="p-6 shadow-md w-full lg:w-5/12 flex flex-col mt-24 md:mt-0">
         <h1>Rowan &amp; Denielle's Wedding</h1>
-        <h2>Tying the knot, <br />11th of September, 2022 <br />...in Edwardian fashion amidst the trees and by the sea.</h2>
+        <h2>Tied the knot on the <br />11th of September, 2022 <br />...in Edwardian fashion amidst the trees and by the sea.</h2>
       </div>
     </div>
   </section>

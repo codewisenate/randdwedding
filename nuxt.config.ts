@@ -69,7 +69,7 @@ const nuxtConfig: Configuration = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+   plugins: [{ src: "~/plugins/lightGallery.client.js", ssr: false }],
 
   /*
    ** Nuxt.js modules

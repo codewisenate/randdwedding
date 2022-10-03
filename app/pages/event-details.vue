@@ -4,14 +4,12 @@
       <div id="content"
         class="px-6 shadow-md flex flex-col w-full lg:w-2/5 justify-center lg:items-start markdown mt-24 md:mt-0"
       >
-        <h1>Event & Venue Details</h1>
+        <h1>Venue History</h1>
 
-        <h2>11th of September, 2022 @ 1:00pm</h2>
-        <h3>
-          <a href="https://cecilgreenpark.ubc.ca/">Cecil Green Park House</a> | “The House
+        <h2>
+          <a href="https://cecilgreenpark.ubc.ca/">Cecil Green Park House</a><br />“The House
           on the Cliff”
-        </h3>
-        <p>6251 Cecil Green Park Rd,<br />Vancouver BC V6T 1Z1</p>
+        </h2>
         <p>
           View:
           <a
@@ -20,34 +18,6 @@
           >.
         </p>
 
-        <h2>Itinerary</h2>
-        <ul>
-          <li>12:30 - 12:45 | Arrive at venue</li>
-          <li>1:00 - 1:30 | Outdoor ceremony</li>
-          <li>1:30 - 3:00 | Outdoor cocktail hour</li>
-          <li>3:00 | Indoor afternoon tea</li>
-          <li>Wrap up roughly at 6:00pm</li>
-        </ul>
-
-        <h2>Parking</h2>
-        <p>
-          There is parking at the venue, however it can be expensive. We recommend using
-          the UBC Rose Garden Parkade across the street (5 minute walk), which is located
-          at 6278 NW Marine Drive, Vancouver.
-        </p>
-
-        <h2>Accessibility</h2>
-        <ul>
-          <li>
-            Wheelchair accessibility is on the right side of the building and the building
-            is fully wheelchair accessible.
-          </li>
-          <li>Lawn can be somewhat bumpy.</li>
-          <li>
-            If you require any accommodations (e.g., seating for ceremony or reception),
-            please inform Rowan or Denielle in advance.
-          </li>
-        </ul>
         <h2>Venue Early History</h2>
         <p>
           Edward Pease Davis, a prominent barrister, solicitor and courtroom lawyer and
