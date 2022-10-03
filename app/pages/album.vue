@@ -98,10 +98,16 @@ export default class Home extends Vue {
     display: block;
   }
 }
+.image-container {
+  @media (min-width: 640px) {
+    height: auto;
+    display: flex;
+  }
+}
 img {
   @media (min-width: 640px) {
     max-width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     transform: all 0.3s ease;
   }
