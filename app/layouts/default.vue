@@ -151,6 +151,10 @@ a {
   border-radius: 6px;
 }
 
+body.travel #content {
+  background: linear-gradient(20deg, rgba($darkgreen,0.99) 90%, rgba($darkgreen,0.2) 100%);
+}
+
 .divider {
   position: relative;
   min-width: 100vw;
