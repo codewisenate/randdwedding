@@ -10,7 +10,7 @@
        <p class='largescreen'>Click to enlarge images and press tab to progress through them.</p>
 
         <p>*More photos to come! Save this page in your bookmarks and visit later as we receive the rest of the collection.</p>
-        <div class='gallery' @keydown.esc='doBlur'>
+        <div class='gallery' @keydown='checkKey'>
         <div class='image-container' tabindex="0"><img src='../assets/images/01.jpg' /></div>
         <div class='image-container' tabindex="0"><img src='../assets/images/02.jpg' /></div>
         <div class='image-container' tabindex="0"><img src='../assets/images/03.jpg' /></div>
@@ -77,8 +77,32 @@ export default class Home extends Vue {
       }
     }
   }
-  doBlur() {
-    document.activeElement.blur();
+  checkKey(e) {
+
+    e = e || window.event;
+    const currentEl = document.activeElement;
+    const prevEl = currentEl?.previousElementSibling;
+    const nextEl = currentEl?.nextElementSibling;
+    if (e.keyCode == '38' || e.keyCode == '37') {
+        // up / left arrow
+        if (null !== prevEl) { 
+          prevEl?.focus(); 
+        } else { 
+          if (null !== currentEl) { currentEl?.blur(); }
+        }
+    }
+    if (e.keyCode == '40' || e.keyCode == '39') {
+        // down / right arrow
+        if (null !== nextEl) { 
+          nextEl?.focus(); 
+        } else { 
+          if (null !== currentEl) { currentEl?.blur(); }
+        }
+    }
+    if (e.keyCode == '27') {
+        // esc
+        if (null !== currentEl) { currentEl?.blur(); }
+    }
   }
 }
 
