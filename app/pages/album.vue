@@ -7,7 +7,7 @@
         <h1>Our Wedding Album</h1>
        <p>Thank you to everyone who joined us to celebrate our big day! It meant a lot to have so many of the people we love with us for our ceremony and afternoon tea. Travel back in time with us once more and peruse these memories from the day at your leisure…</p>
 
-       <p class='largescreen'>Click to enlarge images and press tab to progress through them.</p>
+       <p class='largescreen'>Click to enlarge images and press tab (or use arrow keys) to progress through them.</p>
 
         <p>*More photos to come! Save this page in your bookmarks and visit later as we receive the rest of the collection.</p>
         <div class='gallery' @keydown='checkKey'>
